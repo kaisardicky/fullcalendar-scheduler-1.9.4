@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <link href='../lib/fullcalendar2.min.css' rel='stylesheet' />
+    <link href='../lib/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+    <link href='../scheduler2.min.css' rel='stylesheet' />
+    <script src='../lib/moment.min.js'></script>
+    <script src='../lib/jquery.min.js'></script>
+    <script src='../lib/fullcalendar.min.js'></script>
+    <script src='../scheduler.min.js'></script>
+    <script>
+    $(function() { // document ready
+    $('#calendar').fullCalendar({
+    contentHeight: 600,
+    contentWidth: 600,
+    now: '2018',
+    editable: true,
+    aspectRatio: 1.8,
+    scrollTime: '00:00',
+    header: {
+    left: 'today prev,next',
+    center: 'title',
+    right: 'timelineYear'
+    },
+    defaultView: 'timelineYear',
+    type: 'timeline',
+    slotLabelInterval: {months: 1},
+    slotDuration: {days:1},
+    slotWidth: 5,
+    resourceAreaWidth: '40%',
+    resourceColumns: [
+    {
+    group: true,
+    labelText: 'field',
+    field: 'field'
+    },
+    {
+    group: true,
+    labelText: 'No',
+    field: 'building' 
+    },
+    {
+    group: true,
+    labelText: 'Vendor',
+    field: 'vendor'
+    },
+    {
+    group: false,
+    labelText: 'RIG',
+    field: 'title'
+    }
+    ],
+    // ,test: 'N-110UE/59'
+    // ,test: '1500 HP'
+    // ,test: 'PDSI'
+
+    resources: [
+
+    { id: 'a', field:'JAMBI', building: '1',vendor:'Coba',title: 'MASTER', occupancy: 40},
+    { id: 'b', field:'JAMBI', building: '1',vendor:'Coba', title: 'PROYEKSI', occupancy: 40},
+    { id: 'c', field:'JAMBI', building: '1',vendor:'Coba', title: 'REALISASI', occupancy: 40},
+
+    { id: 'd', building: '2', title: 'MASTER', occupancy: 40},
+    { id: 'e', building: '2', title: 'PROYEKSI', occupancy: 40},
+    { id: 'f', building: '2',title: 'REALISASI', occupancy: 40},
+
+    { id: 'g', building: '3', title: 'MASTER', occupancy: 40},
+    { id: 'h', building: '3', title: 'PROYEKSI', occupancy: 40},
+    { id: 'i', building: '3',title: 'REALISASI', occupancy: 40},
+
+    { id: 'j', building: '4', title: 'MASTER', occupancy: 40},
+    { id: 'k', building: '4', title: 'PROYEKSI', occupancy: 40},
+    { id: 'l', building: '4',title: 'REALISASI', occupancy: 40},
+
+    { id: 'm', building: '5', title: 'MASTER', occupancy: 40},
+    { id: 'n', building: '5', title: 'PROYEKSI', occupancy: 40},
+    { id: 'o', building: '5',title: 'REALISASI', occupancy: 40},
+
+    { id: 'p', building: '6', title: 'MASTER', occupancy: 40},
+    { id: 'q', building: '6', title: 'PROYEKSI', occupancy: 40},
+    { id: 'r', building: '6',title: 'REALISASI', occupancy: 40},
+
+    { id: 's', building: '7', title: 'MASTER', occupancy: 40},
+    { id: 't', building: '7', title: 'PROYEKSI', occupancy: 40},
+    { id: 'u', building: '7',title: 'REALISASI', occupancy: 40},
+    ],
+
+/*
+    eventSources: [
+    {
+      events: [
+      {
+
+      }]
+    }]
+  */  
+
+
+    events: [
+    { id: '1', resourceId: 'a', start: '2018-01-01', end: '2018-01-31', title: 'TTN-1 / 154 HK\n3800 m (V) (5 DST)\n30-11-17  -  29-05-2018', color: 'red' },
+
+    { id: '2', resourceId: 'a', start: '2018-02-01', end: '2018-03-10', title: 'WMP-D2 (55 HK)\n2700 m (D)', color: 'green' },
+
+    { id: '3', resourceId: 'b', field:'JAMBI', start: '2018-01-01', end: '2018-02-15', title: 'TTN-1 / 154 HK\n3800 m (V) (5 DST)\n30-11-17  -  On Progress', color: 'red' },
+
+    { id: '4', resourceId: 'b', start: '2018-03-01', end: '2018-04-07', title: 'WMP-D2 (55 HK)\n2700 m (D)', color: 'green' },
+
+    { id: '5', resourceId: 'c', start: '2018-01-01', end: '2018-02-15', title: 'TTN-1 / 154 HK\n3800 m (V) (5 DST)\n30-11-17 - On Progress', color: 'grey' },
+
+    { id: '6', resourceId: 'b', start: '2018-03-02', end: '2018-04-07', title: 'WMP-D2 :\nWellhead 10K EE Class,\ndelivery time Akhir Mei\n2018\nLokasi siap Medio April\n2018', color: 'white', textColor: 'black' },
+
+    { id: '7', resourceId: 'g', start: '2018-04-7', end: '2018-04-07', title: 'WMP-D2 (55 HK)\n2700 m (D)' }
+    ]
+
+    });
+    
+    });
+    </script>
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+    }
+    #calendar {
+    max-width: 1500px;
+    margin: 50px auto;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="body">
+      <h1 align="center"><b>BARCHART PEMBORAN SUMUR EKSPLORASI, EKSPLOITASI & WORKOVER RK</b></h1>
+    <div id='calendar'>
+    </div>
+  </body>
+</html>

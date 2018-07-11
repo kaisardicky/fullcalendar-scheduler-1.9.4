@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BARCHART</title>
+		<link rel='stylesheet' href='lib/fullcalendar.min.css' />
+		<link rel='stylesheet' href='lib/fullcalendar.print.min.css' />
+		<script src='lib/jquery.min.js'></script>
+		<script src='lib/moment.min.js'></script>
+		<script src='lib/fullcalendar.min.js'></script>
+		<script src='lib/gcal.min.js'></script>
+		<script src='lib/jquery-ui.min.js'></script>
+		<script src='jquery-3.3-1.js'></script>
+		<script src='scheduler.js'></script>
+		<script src='scheduler.min.js'></script>
+		<link rel='stylesheet' href='scheduler.min.css' />
+		<link rel='stylesheet' href='scheduler.css' />
+	</head>
+	<body>
+		<h1 align="center"><b>BARCHART PEMBORAN SUMUR EKSPLORASI, EKSPLOITASI & WORKOVER RK TH 2018</b></h1>
+		<div id='calendar'></div>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		// page is now ready, initialize the calendar...
+		$('#calendar').fullCalendar({
+		// put your options and callbacks here
+		})
+		});
+		$('#calendar').fullCalendar({
+	schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives'
+	});
+	</script>
+</html>
