@@ -21,7 +21,7 @@
     header: {
     left: 'today prev,next',
     center: 'title',
-    right: 'timelineYear'
+    right: ''
     },
     defaultView: 'timelineYear',
     type: 'timeline',
@@ -33,21 +33,24 @@
     {
     group: true,
     labelText: 'field',
-    field: 'field'
+    field: 'field',
+    width: '20%'
     },
     {
     group: true,
     labelText: 'No',
-    field: 'building' 
+    field: 'building',
+    width: '15%' 
     },
     {
     group: true,
-    labelText: 'Vendor',
-    field: 'vendor'
+    labelText: 'RIG',
+    field: 'RIG',
+    width: '30%'
     },
     {
     group: false,
-    labelText: 'RIG',
+    labelText: 'Status',
     field: 'title'
     }
     ],
@@ -57,13 +60,13 @@
 
     resources: [
 
-    { id: 'a', field:'JAMBI', building: '1',vendor:'Coba',title: 'MASTER', occupancy: 40},
-    { id: 'b', field:'JAMBI', building: '1',vendor:'Coba', title: 'PROYEKSI', occupancy: 40},
-    { id: 'c', field:'JAMBI', building: '1',vendor:'Coba', title: 'REALISASI', occupancy: 40},
+    { id: 'a', field:'JAMBI', building: '1',RIG:'N-110UE/59\n1500 HP\nPDSI',title: 'MASTER', occupancy: 40},
+    { id: 'b', field:'JAMBI', building: '1',RIG:'N-110UE/59\n1500 HP\nPDSI', title: 'PROYEKSI', occupancy: 40},
+    { id: 'c', field:'JAMBI', building: '1',RIG:'N-110UE/59\n1500 HP\nPDSI', title: 'REALISASI', occupancy: 40},
 
-    { id: 'd', building: '2', title: 'MASTER', occupancy: 40},
-    { id: 'e', building: '2', title: 'PROYEKSI', occupancy: 40},
-    { id: 'f', building: '2',title: 'REALISASI', occupancy: 40},
+    { id: 'd', field:'JAMBI', building: '2',RIG: 'Coba2', title: 'MASTER', occupancy: 40},
+    { id: 'e', field:'JAMBI', building: '2',RIG: 'Coba2',  title: 'PROYEKSI', occupancy: 40},
+    { id: 'f', field:'JAMBI', building: '2',RIG: 'Coba2',  title: 'REALISASI', occupancy: 40},
 
     { id: 'g', building: '3', title: 'MASTER', occupancy: 40},
     { id: 'h', building: '3', title: 'PROYEKSI', occupancy: 40},
@@ -102,15 +105,24 @@
 
     { id: '2', resourceId: 'a', start: '2018-02-01', end: '2018-03-10', title: 'WMP-D2 (55 HK)\n2700 m (D)', color: 'green' },
 
-    { id: '3', resourceId: 'b', field:'JAMBI', start: '2018-01-01', end: '2018-02-15', title: 'TTN-1 / 154 HK\n3800 m (V) (5 DST)\n30-11-17  -  On Progress', color: 'red' },
+    { id: '3', resourceId: 'b', start: '2018-01-01', end: '2018-02-15', title: 'TTN-1 / 154 HK\n3800 m (V) (5 DST)\n30-11-17  -  On Progress', color: 'red' },
 
     { id: '4', resourceId: 'b', start: '2018-03-01', end: '2018-04-07', title: 'WMP-D2 (55 HK)\n2700 m (D)', color: 'green' },
 
-    { id: '5', resourceId: 'c', start: '2018-01-01', end: '2018-02-15', title: 'TTN-1 / 154 HK\n3800 m (V) (5 DST)\n30-11-17 - On Progress', color: 'grey' },
+    { id: '5', resourceId: 'c', start: '2018-01-01', end: '2018-02-15', title: 'TTN-1 / 154 HK\n3800 m (V) (5 DST)\n30-11-17 - On Progress', color: 'grey', textColor: 'black' },
 
     { id: '6', resourceId: 'b', start: '2018-03-02', end: '2018-04-07', title: 'WMP-D2 :\nWellhead 10K EE Class,\ndelivery time Akhir Mei\n2018\nLokasi siap Medio April\n2018', color: 'white', textColor: 'black' },
 
-    { id: '7', resourceId: 'g', start: '2018-04-7', end: '2018-04-07', title: 'WMP-D2 (55 HK)\n2700 m (D)' }
+    { id: '7', resourceId: 'd', start: '2018-01-01', end: '2018-01-31', title: 'PHE Siak (inc Mob)', color: 'pink', textColor: 'red' },
+
+    { id: '8', resourceId: 'e', start: '2018-01-10', end: '2018-01-24', title: 'KSB-04', color: 'yellow', textColor: 'black' },
+
+    { id: '9', resourceId: 'e', start: '2018-01-25', end: '2018-03-31', title: 'Sumur Kurnis PHE Siak\n(58 hr : Mob, Ops, Demob)', color: 'pink', textColor: 'red' },
+
+   { id: '10', resourceId: 'f', start: '2018-01-10', end: '2018-01-24', title: 'KSB-04', color: 'grey', textColor: 'black' },
+
+   { id: '10', resourceId: 'f', start: '2018-01-25', end: '2018-03-31', title: 'Hasil Rapat di Persero @ 29 Jan. 2018 : - CWKT\nmenyelesaikan WO KSB-04 - Sumur Kumis-02 PHE Siak : 14 hari\nmob; 13 hari ops; 17 hari komplesi; 14 hari demob. ke \nKSB-Prop3 TTN*', color: '#FFFDD0', textColor: 'black' }
+
     ]
 
     });
