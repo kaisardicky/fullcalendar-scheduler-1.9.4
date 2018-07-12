@@ -12,15 +12,13 @@
     <script>
     $(function() { // document ready
     $('#calendar').fullCalendar({
-    contentHeight: 600,
-    contentWidth: 600,
     now: '2018',
     editable: true,
     aspectRatio: 1.8,
     scrollTime: '00:00',
     header: {
-    left: 'today prev,next',
-    center: 'title',
+    left: 'title,prev,next,today',
+    center: '',
     right: ''
     },
     defaultView: 'timelineYear',
@@ -28,65 +26,63 @@
     slotLabelInterval: {months: 1},
     slotDuration: {days:1},
     slotWidth: 5,
-    resourceAreaWidth: '40%',
+    resourceAreaWidth: '45%',
     resourceColumns: [
     {
     group: true,
     labelText: 'field',
     field: 'field',
-    width: '20%'
+    width: '30%'
     },
     {
     group: true,
     labelText: 'No',
-    field: 'building',
-    width: '15%' 
+    field: 'No',
+    width: '20%' 
     },
     {
     group: true,
     labelText: 'RIG',
     field: 'RIG',
-    width: '30%'
+    width: '40%'
     },
     {
     group: false,
     labelText: 'Status',
-    field: 'title'
+    field: 'title',
+    width: '30%'
     }
     ],
-    // ,test: 'N-110UE/59'
-    // ,test: '1500 HP'
-    // ,test: 'PDSI'
 
     resources: [
 
-    { id: 'a', field:'JAMBI', building: '1',RIG:'N-110UE/59\n1500 HP\nPDSI',title: 'MASTER', occupancy: 40},
-    { id: 'b', field:'JAMBI', building: '1',RIG:'N-110UE/59\n1500 HP\nPDSI', title: 'PROYEKSI', occupancy: 40},
-    { id: 'c', field:'JAMBI', building: '1',RIG:'N-110UE/59\n1500 HP\nPDSI', title: 'REALISASI', occupancy: 40},
+    { id: 'a', field:'JAMBI', No: '1',RIG:'N-110UE/59\n1500 HP\nPDSI',title: 'MASTER', occupancy: 40},
+    { id: 'b', field:'JAMBI', No: '1',RIG:'N-110UE/59\n1500 HP\nPDSI', title: 'PROYEKSI', occupancy: 40},
+    { id: 'c', field:'JAMBI', No: '1',RIG:'N-110UE/59\n1500 HP\nPDSI', title: 'REALISASI', occupancy: 40},
 
-    { id: 'd', field:'JAMBI', building: '2',RIG: 'Coba2', title: 'MASTER', occupancy: 40},
-    { id: 'e', field:'JAMBI', building: '2',RIG: 'Coba2',  title: 'PROYEKSI', occupancy: 40},
-    { id: 'f', field:'JAMBI', building: '2',RIG: 'Coba2',  title: 'REALISASI', occupancy: 40},
+    { id: 'd', field:'JAMBI', No: '2',RIG: 'CWKT 210-B/2-A 400 HP PDSI ', title: 'MASTER', occupancy: 40},
+    { id: 'e', field:'JAMBI', No: '2',RIG: 'CWKT 210-B/2-A 400 HP PDSI ',  title: 'PROYEKSI', occupancy: 40},
+    { id: 'f', field:'JAMBI', No: '2',RIG: 'CWKT 210-B/2-A 400 HP PDSI ',  title: 'REALISASI', occupancy: 40},
 
-    { id: 'g', building: '3', title: 'MASTER', occupancy: 40},
-    { id: 'h', building: '3', title: 'PROYEKSI', occupancy: 40},
-    { id: 'i', building: '3',title: 'REALISASI', occupancy: 40},
+    { id: 'g', No: '3', title: 'MASTER', occupancy: 40},
+    { id: 'h', No: '3', title: 'PROYEKSI', occupancy: 40},
+    { id: 'i', No: '3',title: 'REALISASI', occupancy: 40},
 
-    { id: 'j', building: '4', title: 'MASTER', occupancy: 40},
-    { id: 'k', building: '4', title: 'PROYEKSI', occupancy: 40},
-    { id: 'l', building: '4',title: 'REALISASI', occupancy: 40},
+    { id: 'j', No: '4', title: 'MASTER', occupancy: 40},
+    { id: 'k', No: '4', title: 'PROYEKSI', occupancy: 40},
+    { id: 'l', No: '4',title: 'REALISASI', occupancy: 40},
 
-    { id: 'm', building: '5', title: 'MASTER', occupancy: 40},
-    { id: 'n', building: '5', title: 'PROYEKSI', occupancy: 40},
-    { id: 'o', building: '5',title: 'REALISASI', occupancy: 40},
+    { id: 'm', No: '5', title: 'MASTER', occupancy: 40},
+    { id: 'n', No: '5', title: 'PROYEKSI', occupancy: 40},
+    { id: 'o', No: '5',title: 'REALISASI', occupancy: 40},
 
-    { id: 'p', building: '6', title: 'MASTER', occupancy: 40},
-    { id: 'q', building: '6', title: 'PROYEKSI', occupancy: 40},
-    { id: 'r', building: '6',title: 'REALISASI', occupancy: 40},
+    { id: 'p', No: '6', title: 'MASTER', occupancy: 40},
+    { id: 'q', No: '6', title: 'PROYEKSI', occupancy: 40},
+    { id: 'r', No: '6',title: 'REALISASI', occupancy: 40},
 
-    { id: 's', building: '7', title: 'MASTER', occupancy: 40},
-    { id: 't', building: '7', title: 'PROYEKSI', occupancy: 40},
-    { id: 'u', building: '7',title: 'REALISASI', occupancy: 40},
+    { id: 's', No: '7', title: 'MASTER', occupancy: 40},
+    { id: 't', No: '7', title: 'PROYEKSI', occupancy: 40},
+    { id: 'u', No: '7',title: 'REALISASI', occupancy: 40},
     ],
 
 /*
