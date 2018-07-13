@@ -14,12 +14,19 @@
     $('#calendar').fullCalendar({
     now: '2018-07-13',
     editable: true,
+    selectable: true,
     aspectRatio: 1.8,
     scrollTime: '00:00',
     header: {
     left: 'title,prev,next,today',
     center: '',
     right: ''
+    },
+    dayClick: function(date) {
+      alert('clicked ' + date.format());
+    },
+    select: function(startDate, endDate) {
+      alert('selected ' + startDate.format() + ' to ' + endDate.format());
     },
     defaultView: 'timelineYear',
     type: 'timeline',
