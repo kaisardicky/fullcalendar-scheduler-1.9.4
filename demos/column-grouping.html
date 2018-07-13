@@ -22,9 +22,21 @@
     center: '',
     right: ''
     },
-    dayClick: function(date) {
-      alert('clicked ' + date.format());
+    eventClick: function(eventObj) {
+      if (eventObj.url) {
+        alert(
+          'Clicked ' + eventObj.title + '.\n' +
+          'Will open ' + eventObj.url + ' in a new tab'
+        );
+
+        window.open(eventObj.url);
+
+        return false; // prevents browser from following link in current tab.
+      } else {
+        alert('Clicked ' + eventObj.title);
+      }
     },
+
     select: function(startDate, endDate) {
       alert('selected ' + startDate.format() + ' to ' + endDate.format());
     },
