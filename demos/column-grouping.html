@@ -22,24 +22,31 @@
     center: '',
     right: ''
     },
-    eventClick: function(eventObj) {
-      if (eventObj.url) {
-        alert(
-          'Clicked ' + eventObj.title + '.\n' +
-          'Will open ' + eventObj.url + ' in a new tab'
-        );
+    
+    select: function(start, end, jsEvent, view) {
+        var title = prompt("Enter a title for this event", "New event");
+        if (title != null) {
+            var event = {
+                title: title.trim() != "" ? title : "New event",
+                start: start,
+                end: end
+            };
 
-        window.open(eventObj.url);
+        $('#calendar').fullCalendar("renderEvent", event, true);
+        
+        };
 
-        return false; // prevents browser from following link in current tab.
-      } else {
-        alert('Clicked ' + eventObj.title);
-      }
+        $('#calendar').fullCalendar("unselect");
     },
 
-    select: function(startDate, endDate) {
-      alert('selected ' + startDate.format() + ' to ' + endDate.format());
+    eventClick: function(event, jsEvent, view){
+        var newTitle = prompt("Edit this event", event.title);
+        if (newTitle != null) {
+            event.title = newTitle.trim() != "" ? newTitle : event.title;
+            $('#calendar').fullCalendar("updateEvent", event);
+        }
     },
+    
     defaultView: 'timelineYear',
     type: 'timeline',
     slotLabelInterval: {months: 1},
