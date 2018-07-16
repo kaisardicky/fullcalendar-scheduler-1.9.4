@@ -9,7 +9,7 @@
 }
 
 .fc-resource-area th>div, .fc-scroller-canvas, .fc-scroller-canvas>.fc-content, .fc-scroller-clip {
-	position: relative
+	position: absolute;
 }
 
 .fc-scroller-clip, .fc-timeline .fc-cell-content, tr.fc-collapsed>td, tr.fc-transitioning>td {
