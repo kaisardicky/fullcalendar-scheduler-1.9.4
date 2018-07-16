@@ -13,7 +13,8 @@
 }
 
 .fc-scroller-clip, .fc-timeline .fc-cell-content, tr.fc-collapsed>td, tr.fc-transitioning>td {
-	overflow: hidden
+	overflow: hidden;
+	text-align: center
 }
 
 .fc-no-scrollbars {
@@ -122,7 +123,7 @@
 }
 
 .fc-resource-area col {
-	width: 10%;
+	width: 40%;
 	min-width: 70px
 }
 
@@ -134,7 +135,7 @@
 	display: none
 }
 
-.fc-ltr .fc-resource-area tr {
+.fc-ltr .fc-resource-area tr>* {
 	text-align: center
 }
 
@@ -209,7 +210,7 @@ tr.fc-collapsed>td>div {
 }
 
 .fc-ltr .fc-time-area .fc-chrono th {
-	text-align: left
+	text-align: center
 }
 
 .fc-rtl .fc-time-area .fc-chrono th {
